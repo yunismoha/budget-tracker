@@ -148,3 +148,384 @@ summary {
 .video-section iframe {
     max-width: 100%;
 }
+
+
+
+/* =================================
+   1. GOOGLE FONTS
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap');
+
+
+/* =================================
+   2. COLOR PALETTE
+================================= */
+
+:root {
+    --primary-color: #35216b;
+    --secondary-color: #6c4ab6;
+    --light-purple: #eee8fa;
+    --background-color: #f6f4fb;
+    --white: #ffffff;
+    --text-color: #333044;
+    --muted-color: #777387;
+    --border-color: #e2ddec;
+    --table-alternate: #f4f0fb;
+}
+
+
+/* =================================
+   3. GENERAL STYLING
+================================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    margin: 0;
+    padding: 30px 20px;
+    line-height: 1.6;
+}
+
+
+/* =================================
+   4. HEADING CARD
+================================= */
+
+#main-header {
+    background: linear-gradient(
+        135deg,
+        var(--primary-color),
+        var(--secondary-color)
+    );
+
+    color: var(--white);
+    text-align: center;
+
+    padding: 40px 25px;
+    border-radius: 16px;
+
+    margin: 0 auto 30px;
+    max-width: 1100px;
+
+    box-shadow: 0 6px 20px rgba(53, 33, 107, 0.15);
+}
+
+#main-header img {
+    display: block;
+    margin: 0 auto 12px;
+}
+
+#main-header h1 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 32px;
+    font-weight: 700;
+    margin: 0 0 8px;
+}
+
+#main-header p {
+    color: #e9e2f7;
+    font-size: 16px;
+    margin: 0;
+}
+
+
+/* =================================
+   5. MAIN CONTENT
+================================= */
+
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+
+/* =================================
+   6. SECTION HEADINGS
+================================= */
+
+h2 {
+    font-family: 'Poppins', sans-serif;
+    color: var(--primary-color);
+    font-size: 22px;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+
+
+/* =================================
+   7. ADD EXPENSE FORM CARD
+================================= */
+
+.expense-form {
+    background-color: var(--white);
+
+    padding: 30px;
+    border-radius: 14px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid var(--border-color);
+
+    box-shadow: 0 4px 15px rgba(53, 33, 107, 0.06);
+}
+
+
+/* Form labels */
+
+.expense-form label {
+    display: block;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 6px;
+    color: var(--text-color);
+}
+
+
+/* Form inputs and dropdown */
+
+input,
+select {
+    display: block;
+    width: 100%;
+
+    padding: 13px 15px;
+
+    margin-bottom: 18px;
+
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+
+    background-color: #fcfbfe;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+
+    color: var(--text-color);
+
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+
+/* Input focus effect */
+
+input:focus,
+select:focus {
+    outline: none;
+
+    border-color: var(--secondary-color);
+
+    box-shadow: 0 0 0 3px rgba(108, 74, 182, 0.12);
+}
+
+
+/* =================================
+   8. BUTTON STYLING
+================================= */
+
+button {
+    background-color: var(--primary-color);
+
+    color: var(--white);
+
+    padding: 13px 24px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+button:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+}
+
+
+/* =================================
+   9. EXPENSE TABLE CARD
+================================= */
+
+.expenses-list {
+    background-color: var(--white);
+
+    padding: 30px;
+    border-radius: 14px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid var(--border-color);
+
+    box-shadow: 0 4px 15px rgba(53, 33, 107, 0.06);
+
+    overflow-x: auto;
+}
+
+
+/* Table */
+
+.expenses-list table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+
+/* Table headers and cells */
+
+.expenses-list th,
+.expenses-list td {
+    padding: 15px 18px;
+
+    text-align: left;
+
+    border-bottom: 1px solid var(--border-color);
+
+    font-size: 14px;
+}
+
+
+/* Table header */
+
+.expenses-list th {
+    background-color: var(--primary-color);
+
+    color: var(--white);
+
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+
+/* Alternating row colors */
+
+.expenses-list tbody tr:nth-child(even) {
+    background-color: var(--table-alternate);
+}
+
+
+/* Table hover */
+
+.expenses-list tbody tr:hover {
+    background-color: var(--light-purple);
+}
+
+
+/* First row */
+
+.expenses-list tbody tr:first-child {
+    font-weight: 600;
+}
+
+
+/* Rounded table header corners */
+
+.expenses-list thead th:first-child {
+    border-top-left-radius: 8px;
+}
+
+.expenses-list thead th:last-child {
+    border-top-right-radius: 8px;
+}
+
+
+/* =================================
+   10. INSTRUCTIONS CARD
+================================= */
+
+.instructions {
+    background-color: var(--white);
+
+    padding: 25px;
+    border-radius: 14px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid var(--border-color);
+}
+
+summary {
+    color: var(--primary-color);
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.instructions p {
+    color: var(--muted-color);
+    font-size: 14px;
+}
+
+
+/* =================================
+   11. VIDEO CARD
+================================= */
+
+.video-section {
+    background-color: var(--white);
+
+    padding: 30px;
+    border-radius: 14px;
+
+    margin-bottom: 30px;
+
+    border: 1px solid var(--border-color);
+}
+
+.video-section iframe {
+    width: 100%;
+    max-width: 650px;
+    border: none;
+    border-radius: 10px;
+}
+
+
+/* =================================
+   12. RESPONSIVE DESIGN
+================================= */
+
+@media (max-width: 600px) {
+
+    body {
+        padding: 15px 10px;
+    }
+
+    #main-header {
+        padding: 30px 15px;
+    }
+
+    #main-header h1 {
+        font-size: 24px;
+    }
+
+    .expense-form,
+    .expenses-list,
+    .instructions,
+    .video-section {
+        padding: 18px;
+    }
+
+    .expenses-list th,
+    .expenses-list td {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
+
