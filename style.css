@@ -1,0 +1,62 @@
+
+/* Element selector */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 20px;
+}
+
+/* ID selector */
+#main-header {
+    background-color: #35216b;
+    color: white;
+    text-align: center;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
+
+/* Element selector */
+h2 {
+    color: #35216b;
+}
+
+/* Class selector */
+.expense-form {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Input styling */
+input {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Button styling */
+button {
+    background-color: #35216b;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Class selector */
+.expenses-list {
+    background-color: #e8e3f5;
+    padding: 25px;
+    border-radius: 10px;
+    min-height: 100px;
+}
